@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Blog</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Arbutus+Slab"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab"/>
+  <link rel="stylesheet" href="blog.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+  <img id="backgroundImage" src="halloween-bkgd.png" alt="background image featuring spooky atmospheric woods"/>
+  <header id="pageHeader">
+    <h1>a hopefully helpful blog</h1>
+    <img src="moonbanner-cut.svg" alt="banner featuring crescent moon"/>
+    <svg  xmlns="http://www.w3.org/2000/svg" viewbox"0 0 1799.7553 399.99917" <path id="moonpath" d="m 1338.3026,222.81333 c 43.1799,64.28174 117.9981,100.08247 192.9884,111.01005 97.927,17.3305 199.4412,11.83499 295.7623,-12.08805 53.1007,-14.50382 106.3032,-41.93054 136.0043,-90.12211 8.1416,-9.27334 -5.8991,23.31979 -8.0224,30.31163 -31.5354,81.63968 -97.2771,151.1578 -181.1932,179.05261 -119.2572,42.91794 -264.7938,16.93539 -353.138,-76.71086 -38.1479,-39.80866 -65.0274,-89.38866 -82.4014,-141.45327 z"  />
+    <!--nav>
+    <ul>
+    <li><a href="#">Nav</a></li>
+    <li><a href="#">Nav</a></li>
+    <li><a href="#">Nav</a></li>
+    <li><a href="#">Nav</a></li>
+    <li><a href="#">Nav</a></li>
+  </ul>
+</nav-->
+</header>
+<div id="layoutContainer">
+  <main class="postFeedContainer">
+    <section class="postFeed">
+      <article class="post">
+        <h1 class="postHeader">Quick Ways To Make Your Site More Accessible</h1>
+        <p class="postBody">Internet should be made accessible to all audiences, including those with vision impairments. Following W3C recommendations and WAI-ARIA guideslines is a great way to do that, which you can access <a href=#sources>here.</a>
+          Readability of content on a webpage can define its level of accessibility. It's not rare to for web developers to accidentally deploy unreadable content when using background images, for example. Try using these quick methods to improve the text readability of your site's text content:</p>
+          <h3>Apply a filter on your background image </h3><p>Using image editing apps, you can adjust saturation, brightness, and contrast of the image. The goal is to make the background image close to monotone. This makes it simpler to choose a font color that is legible over the background image. To that end, image editing software includes presets or filters that make it pretty simple. </p>
+          <h3>Use WebAIM's evaluation tool</h3><p>The <a href="https://wave.webaim.org/">WebAIM WAVE</a> tool's desaturate feature is a good way to test the level of contrast between text and other elements on your page. In addition, the WAVE tool checks for other accessibility features, such as ARIA labels, which makes it an all-around helpful tool for designing accessible websites.</p>
+          <figure><img src="wave tool test.png" alt="WebAIM's Wave Tool for evaluating site accessibility"</img><figcaption>WebAIM's Wave Tool for evaluating site accessibility</figcaption></figure>
+          <h3>Use image editing software:</h3>
+          <figure><img src="red blind.png" alt="Example of using editing software to test with a color blind filter feature."><figcaption>Testing with a color blind filter feature in Inkscape SVG editing software.</figcaption></figure>
+          <p>As mentioned earlier, image editing software is a great tool for checking contrast on your site. Inkscape in particular features Color Blind filters that are handy for this use-case.</p>
+          <h3>Use an opaque background color behind text content</h3>
+          <p>Style your element, such as a "div" or "p" element, with a background color that is the inverse of your font color. If your text is white use a black background with low opacity. Using <a href="#sources">HSLA hue values</a> is a great way to control the opacity of your background color.
+            <h3>Use the accessibility checking tools of your browser's developer mode</h3>
+            <p>Developer mode in modern browsers is a great tool for meeting web standards and improving the structure and performance of your site's code. Features like Lighthouse, contrast checkers, and ARIA suggestions are usually wrapped into the Developer Mode of your browser.</p>
+          </article>
+          <footer class="postFoot">
+            <h2>For deep dives and to learn more:</h2>
+            <ul id="sources">
+              <li> <a src="https://www.w3.org/WAI/standards-guidelines/aria/" target="-_blank">W3 ARIA Guidelines</a></li>
+              <li><a src="https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/hsla()" target="_blank">HSLA Colors</a></li>
+              <li><a src="https://moderncss.dev/modern-css-upgrades-to-improve-accessibility/">Modern CSS for Accessibility</a></li>
+            </ul>
+          </footer>
+        </section>
+      </main>
+      <aside id="sidePane">
+        <!-- <header><h2>Resource Links</h2></header> -->
+      </aside>
+      <footer id="pageFooter">
+        <p class="pageFooter" ></p>
+        <img class="banner" src="footer-moonbanner-cut-fade.svg" alt="footer banner featuring a moon"/>
+      </footer>
+    </div>
+  </body>
+  </html>
