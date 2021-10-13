@@ -9,21 +9,6 @@
   text-decoration: underline;
   list-style-type: georgian;
 }
-@keyframes fill {
-  0% {
-    transform: scaleX(0);
-    fill: white;
-  }
-  
-  50% {
-    fill: yellow;
-  }
-  
-  100% {
-    transform: scaleX(1);
-    fill:white;
-  }
-}
 
 body {
   width: auto;
@@ -53,23 +38,25 @@ p, li, td {
 #pageHeader img {
   position:relative;
   display: block;
+  /* top: -17px; */
   z-index: -1;
   width:100vw;
   opacity: .7;
   animation: bg-color-shift 2s ease  alternate infinite;
   margin-left:auto;
   margin-right:auto;
-  
+  /* overflow-y: clip; */
+  margin-top: 0px;
 }
 #pageHeader h1 {
   position: absolute;
-  width: 100vw;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto 0 auto;
   text-align: center;
   color: #60bc60;
   resize: horizontal;
   z-index: 2;
-  font-size: 50px
+  font-size: 50px;
 }
 .banner {
   width: 100%;
@@ -104,29 +91,31 @@ a:hover {
 #layoutContainer {
   display: grid;
   grid:
-  'pf '
-  'pf '
-  'pf '
-  'ft';
+    'ph'
+    'pf '
+    'pf '
+    'pf '
+    'ft';
   grid-gap: 2px;
-  margin: 0;
-  width:100vw;
+  margin: -20px auto 0 auto;
+  justify-content: center;
+  /* width: 100%; */
   transition: .25s;
   transform: translateY(20px);
 }
 #pageHeader {
   /*  display: grid;
-  grid: 'hdr' /*'hnv'*/;
+  grid: 'hdr' /*'hnv'*/
   position:relative;
-  margin-top: 0;
+  top: 0;
   grid-area: ph;
   font-family: "arbutus slab";
   font-size: 35px;
-  margin: 0 0 -60px 0;
+  /* margin: 0 0 -60px 0; */
   z-index: -1;
-  height: auto;
-  min-height: min-content;
-  background-image: url("moonbanner-cut.svg")
+  height: min-content;
+  /* background-image: url("moonbanner-cut.svg"); */
+  overflow-x: clip;
 }
 /*nav {
 font-family: "roboto slab";
@@ -168,8 +157,12 @@ border-radius: 5px;
 .postFeedContainer {
   grid-area: pf;
   display: grid;
-  grid: 'pfh' 'pst';
-  width: 100%;
+  grid:
+    'pfh'
+    'pst';
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
   height: fit-content;
   padding: 0px 4px 4px 4px;
   z-index: 0;
@@ -186,16 +179,19 @@ body::-webkit-scrollbar-thumb {
 
 .post {
   display: grid;
-  grid: 'phead' 'pbody' 'pfoot';
+  grid:
+    'phead'
+    'pbody'
+    'pfoot';
   grid-auto-flow: row;
   background-image: url("starbanner-cut.svg");
-  font-size: 28px;
-  
+  font-size: 20px;
   padding: 10px;
+  margin: auto;
 }
 
 .post h1 {
-  font-size: 50px;
+  font-size: 38px;
   margin: 0;
   animation: bg-color-shift 5s infinite alternate;
   display: flex;
@@ -204,7 +200,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .post h2, h3 {
-  font-size: 40px;
+  font-size: 25px;
   margin: 0px;
   padding: 10px;
   animation: bg-color-shift 5s infinite alternate;
