@@ -21,9 +21,26 @@
           <h1 class="postHeader">🌒 Moon Phase Project: Animating SVG | October 12, 2021</h1>
           <p class="postBody">Few things are more inspiring then seeing the moon hanging in the night sky. Since it's October, I thought a moon phase component would be a nice small project to work some more with SVG animation.</p>
           <p>For this project, I considered learning some library for CSS animations, but opted to keep it to pure JS and CSS. The simplest solution I was able to draft up is inspired by a CSS Tricks article with a similar concept.</p>
-          <p>The way I plan on making it work is to follow the cycle of moon phases, which spans 29 days. On day 0, 0% of the moon will be filled; halfway at 50% will depict a Full Moon; and by 100%,the New Moon will begin and the circle will again be empty.</p>
+          <p>The way I plan on making it work is to follow the cycle of moon phases, which spans 29.5 days. On day 0, 0% of the moon will be illuminated; halfway at 50% will depict a Full Moon; and by 100%,the New Moon will begin and the circle will again be empty.</p>
           <img src="moonphaseprojectprototype.png" alt="moon phase animation prototype"/>
           <p>This is a work in progress. I will log the results and the methods once completed. </p>
+          <h3> 10/13 UPDATE: Finished ahead of schedule</h3>
+           <p>I should do more of these smaller, fun projects. Here's a breakdown of the methods.</p>
+           <h3>The Maths</h3>
+          <p>The functions I wrote with are based on Javascript's "Date.now()" method. It outputs time in milliseconds elapsed since 1/1/1970 12am to the moment the method is called. I discovered that the first New Moon of 1970 was on January 7th. This became the reference point for calculating 3 data points: Lunation Number, Lunar Age, and Illumination/Lunar Phase.</p>
+          <ul>
+            <li>Lunation Number: Represents how many Lunations, or Lunar Cycles, have passed since an arbitrary date.</li>
+            <li>Lunar Age: Represents how many days into the current Lunation, ranging from Day 1 to Day 29. Here in this project it's represented as a percentage.</li>
+            <li>Lunar Illumination: Percentage of the moon which is reflecting sunlight towards us, creating the illuminated moon that we perceive.</li>
+         </ul>
+         <p>Hopefully these functions are helpful.</p>
+         <h3>The SVG Animation</h3>
+         <p>But really the star of the show, or 🌒 of the show, is the CSS animation. It's super simple, yet satisfying to get it to work. It takes the calculation derived from the Lunar Illumination function. So it is an accurate depiction of the way the moon looks in the sky! I'm sure it's not totally futureproof, though, because I'm rounding. Should be good for like a couple decades or something.</p>
+         <p>The mechanisms behind the animation involves three "layers" of SVG: an overlay with a window cutout of it so you can see the moon, the illuminated part of the moon, and the shaded part of the moon. The illumniated and shaded parts of the moon are actually identical circle SVG's with different fill colors, but one is static and the other is sliding along the X-axis aaccording to the Illumination calculation. The trick of the overlay is that it blends in with the page background. Maybe I'll do a tutorial to explain in more detail.</p>
+         <h3>Summary</h3>
+         <p>From this project I took a reusable SVG animation trick, got familar with built-in Javascript "Date()" methods, and learned about the moon.</p>
+         <p>Also, I went loony when I discovered <a>International Observe the Moon Day</a> is in just a few days.</p>
+         <p>Hopefully this was helpful.</p>
       </article>
       <article class="post">
         <h1 class="postHeader">Quick Ways To Make Your Site More Accessible</h1>
